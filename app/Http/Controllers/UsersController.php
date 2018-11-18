@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 
+use App\User;
+use Hash;
 class UsersController extends Controller
 {
     /**
@@ -14,17 +15,15 @@ class UsersController extends Controller
      */
     public function index()
     {
-      $user = User::all();
-      return view('users.index')->with('user', $user);
+      return view('users.delete');
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Show the form for creating a new resource.
      *
-     * @param  array  $data
-     * @return \App\User
+     * @return \Illuminate\Http\Response
      */
-    protected function create(array $data)
+    protected function create()
     {
         return view('users.create');
     }
@@ -37,26 +36,32 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-      $validateData = $request->validate([
-          'name' => 'required|string|max:255',
-          'last_name' => 'required|string|max:255',
-          'email' => 'required|string|email|max:255|unique:users',
-          'password' => 'required|string|min:6|confirmed',
-          'tipo_id' => 'required|int',
-      ]);
 
+      $validateData = $request->validate([
+          'idCode' => 'required|max:11',
+          'name' => 'required|string|max:255',
+          'second_last_name' => 'required|string|max:255',
+          'first_last_name' => 'required|string|max:255',
+          'email' => 'required|string|email|max:255|unique:users',
+          'user_name' => 'required|string|max:255',
+          'password' => 'required|string|min:6',
+          'user_type' => 'required',
+      ]);
+      return 1;
       //insertar usuario
       $user = new User;
+      $user->id = $request->input('idCode');
       $user->name = $request->input('name');
-      $user->last_name = $request->input('last_name');
+      $user->last_name = $request->input('first_last_name');
+      $user->second_last_name = $request->input('second_last_name');
       $user->email = $request->input('email');
+      $user->user_name = $request->input('user_name');
       $user->password = Hash::make($request->input('password'));
-      $user->tipo_id = $request->input('tipo_id');
+      $user->tipo_id = $request->input('user_type');
       $user->save();
 
       //podriamos hacer un redirect
-      return view('users.create');
-      return redirect('/users/create')->with('succes','User created');
+      return redirect('/user/create')->with('succes','User created');
     }
 
     /**
@@ -68,18 +73,19 @@ class UsersController extends Controller
     public function show($id)
     {
       $user = User::find($id);
+
       return view('users.show')->with('user', $user);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
+    public function modUser(Request $request) {
+
+      if(count($request->all()) == 0) {
+        $user = new User;
+        return view('users.edit')->with('user', $user);
+      }
+      $id = $request->input("Codigo");
       $user = User::find($id);
+      $user->password = "";
       return view('users.edit')->with('user', $user);
     }
 
@@ -92,34 +98,45 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+
       $validateData = $request->validate([
+          'idCode' => 'required|max:11',
           'name' => 'required|string|max:255',
-          'last_name' => 'required|string|max:255',
+          'second_last_name' => 'required|string|max:255',
+          'first_last_name' => 'required|string|max:255',
           'email' => 'required|string|email|max:255|unique:users',
-          'password' => 'required|string|min:6|confirmed',
-          'tipo_id' => 'required|int',
+          'user_name' => 'required|string|max:255',
+          'password' => 'required|string|min:6',
+          'user_type' => 'required',
       ]);
 
-      //insertar usuario
+      //editar
       $user = User::find($id);
       $user->name = $request->input('name');
       $user->last_name = $request->input('last_name');
+      $user->second_last_name = $request->input('second_last_name');
       $user->email = $request->input('email');
-      $user->password = Hash::make($request->input('password'));
-      $user->tipo_id = $request->input('tipo_id');
+      $user->user_name = $request->input('user_name');
+      $user->password = \Hash::make($request->input('password'));
+      $user->tipo_id = $request->input('user_type');
       $user->save();
-
+      $user = new User;
+      return view('users.edit')->with('user', $user);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function delUser()
+    {
+         return view('users.delete');
+    }
+
     public function destroy($id)
     {
         $user = User::find($id);
         $user->delete();
     }
+
+    public function upload(){
+      return view('users.upload');
+    }
+
 }

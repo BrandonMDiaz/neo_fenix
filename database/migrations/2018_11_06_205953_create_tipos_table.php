@@ -16,8 +16,6 @@ class CreateTiposTable extends Migration
         Schema::create('tipos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tipo');
-            $table->unsignedInteger('division_id');
-            $table->foreign('division_id')->references('id')->on('divisions');
             $table->timestamps();
         });
     }

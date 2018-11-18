@@ -32,7 +32,7 @@ class CreatePlanAnualsTable extends Migration
             $table->unsignedInteger('comentario_id');
             $table->foreign('comentario_id')->references('id')->on('comentarios');
             $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');#
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
