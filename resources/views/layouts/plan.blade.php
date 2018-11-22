@@ -15,36 +15,37 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 
-	<title>Administrar cuentas</title>
+	<title>Plan anual</title>
 </head>
 <body>
-  @include('inc.messages')
     <header>
     	<table>
     		<tr>
     		<td><img src="https://st2.depositphotos.com/3643473/6063/i/450/depositphotos_60637477-stock-photo-friends-holding-hands.jpg" height="100" width="100"></td>
     		<td>Nombre usuario</td>
-    		<td><h2 class="blue-text">Administrar cuentas</h2> </td>
+    		<td><h2 class="blue-text">Plan anual</h2> </td>
     		</tr>
     	</table>
     </header>
     <aside style="float: left;">
 	<ul>
 
-	 	<li><button class="btn btn-lg btn-block" type="button">Administrar cuentas</button></li>
-		<li><button class="btn btn-lg btn-block" type="button">Planes de trabajo</button></li>
-  		<li><button class="btn btn-lg btn-block" type="button">Informes anuales</button></li>
-		<li><button class="btn btn-lg btn-block" type="button">Estadisticas</button></li>
+	 	<li><button class="btn btn-lg btn-block" type="button">Plan anual</button></li>
+		<li><button class="btn btn-lg btn-block" type="button">Informe anual</button></li>
 	</ul>
 
 	<ul>
-		<li><a href="/neo_fenix/public/user/create" class="black-text">Crear</a></li>
-		<li><a href="/neo_fenix/public/user/delete" class="black-text">Eliminar</a></li>
-		<li><a href="/neo_fenix/public/user/edit" class="black-text">Modificar</a></li>
-		<li><a href="/neo_fenix/public/user/upload" class="black-text">Cargar</a></li>
+		<li><a href="/neo_fenix/public/plan/docencia" class="black-text">Docencia</a></li>
+		<li><a href="/neo_fenix/public/plan/investigacion" class="black-text">Investigación</a></li>
+		<li><a href="/neo_fenix/public/plan/tutoria" class="black-text">Tutoría</a></li>
+		<li><a href="/neo_fenix/public/plan/gestion" class="black-text">Gestión</a></li>
+        <li><a href="/neo_fenix/public/plan/difusion" class="black-text">Difusión</a></li>
+        <li><a href="/neo_fenix/public/plan/superacion" class="black-text">Superación Académica</a></li>
+        <li><a href="/neo_fenix/public/plan/horas" class="black-text">Horas</a></li>
+        <li><a href="/neo_fenix/public/plan/historial" class="black-text">Historial</a></li>
 	</ul>
 	</aside>
-	<section style="float: left; margin:40px;">
+	<section style="float: left;">
 		@yield('content')
 	</section>
 	 <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>

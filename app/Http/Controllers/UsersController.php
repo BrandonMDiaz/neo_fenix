@@ -47,7 +47,6 @@ class UsersController extends Controller
           'password' => 'required|string|min:6',
           'user_type' => 'required',
       ]);
-      return 1;
       //insertar usuario
       $user = new User;
       $user->id = $request->input('idCode');
@@ -100,13 +99,11 @@ class UsersController extends Controller
     {
 
       $validateData = $request->validate([
-          'idCode' => 'required|max:11',
           'name' => 'required|string|max:255',
           'second_last_name' => 'required|string|max:255',
-          'first_last_name' => 'required|string|max:255',
-          'email' => 'required|string|email|max:255|unique:users',
+          'last_name' => 'required|string|max:255',
+          'email' => 'required|string|email|max:255',
           'user_name' => 'required|string|max:255',
-          'password' => 'required|string|min:6',
           'user_type' => 'required',
       ]);
 
@@ -124,15 +121,22 @@ class UsersController extends Controller
       return view('users.edit')->with('user', $user);
     }
 
-    public function delUser()
+    public function delUser(Request $request)
     {
-         return view('users.delete');
+      if(count($request->all()) == 0) {
+        $user = new User;
+        return view('users.delete2')->with('user', $user);
+      }
+      $id = $request->input("Codigo");
+      $user = User::find($id);
+      return view('users.delete2')->with('user',$user);
     }
 
     public function destroy($id)
     {
         $user = User::find($id);
         $user->delete();
+        return view('users.delete2');
     }
 
     public function upload(){

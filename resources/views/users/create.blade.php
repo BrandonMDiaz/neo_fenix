@@ -10,7 +10,8 @@
         <div class="input-field col s4">
 
             {{ Form::text('name', '', ['id' => 'name',
-            'class' => 'form-control validate']) }}
+            'class' => 'form-control validate', "required" => '',
+            "aria-required"=> "true"]) }}
             <label for="name">Nombre(s)</label>
 
         </div>

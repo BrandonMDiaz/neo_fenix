@@ -17,8 +17,9 @@
         </div>
     </div>
     {!! Form::close() !!}
+</div>
 
-    {!! Form::open(['action' => ['UsersController@update',$user->id],
+{!! Form::open(['action' => ['UsersController@update',$user->id],
     'method' => 'POST', 'class'=>"col s12"]) !!}
     <div class="row">
         <div class="input-field col s4">
@@ -37,37 +38,36 @@
             <label for="second_last_name">Apellido materno</label>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="input-field col s6">
-        {{ Form::text('email', $user->email, ['id' => 'email',
+    <div class="row">
+        <div class="input-field col s6">
+            {{ Form::text('email', $user->email, ['id' => 'email',
           'class' => 'form-control validate']) }}
-        <label for="email">Email</label>
+            <label for="email">Email</label>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="input-field col s4">
-        {{ Form::text('user_name', $user->user_name, ['id' => 'user_name',
+    <div class="row">
+        <div class="input-field col s4">
+            {{ Form::text('user_name', $user->user_name, ['id' => 'user_name',
           'class' => 'form-control validate']) }}
-        <label for="user_name">Nombre de Usuario</label>
+            <label for="user_name">Nombre de Usuario</label>
+        </div>
+
+        <div class="input-field col s4">
+            {{ Form::password('password',  ['id' => 'password',
+          'class' => 'form-control validate']) }}
+            <label for="password">Password</label>
+        </div>
+
+        <div class="input-field col s4">
+            {{ Form::text('user_type', $user->tipo_id, ['id' => 'user_type',
+          'class' => 'form-control validate']) }}
+            <label for="user_type">tipo de usuario</label>
+            <http://127.0.0.1:8000> </div> </div> <div class="row" align="center">
+                {{Form::hidden('_method','PUT')}}
+                {{ Form::submit('Modificar', ['class'=>'btn btn-lg btn-primary']) }}
+        </div>
+    </div>
+    {!! Form::close() !!}
     </div>
 
-    <div class="input-field col s4">
-        {{ Form::password('password',  ['id' => 'password',
-          'class' => 'form-control validate']) }}
-        <label for="password">Password</label>
-    </div>
-
-    <div class="input-field col s4">
-        {{ Form::text('user_type', $user->tipo_id, ['id' => 'user_type',
-          'class' => 'form-control validate']) }}
-        <label for="user_type">tipo de usuario</label>
-        <http://127.0.0.1:8000> </div> </div> <div class="row" align="center">
-          {{Form::hidden('_method','PUT')}}
-          {{ Form::submit('Modificar', ['class'=>'btn btn-lg btn-primary']) }}
-    </div>
-</div>
-{!! Form::close() !!}
-</div>
-
-@stop
+    @stop
