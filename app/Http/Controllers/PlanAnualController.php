@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Plan_anual;
+use App\Docencia;
+use App\Difusion;
+use App\Investigacion;
+use App\Tutoria;
+use App\Gestion;
+use App\Superacion;
+use App\Horas;
 
 class PlanAnualController extends Controller
 {
@@ -37,5 +44,11 @@ class PlanAnualController extends Controller
 
     public function horas(){
       return view('plan.horas');
+    }
+
+    public function pdf(){
+      $plan =  Plan_anual::all();
+      $pdf = PDF::loadView('plan.pdf');
+      return $pdf->download('plan_anual.pdf');
     }
 }
