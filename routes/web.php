@@ -81,15 +81,32 @@ Route::put('/plan/comentarios', 'PlanAnualController@horasCreate');
 Route::put('/plan/horas', 'PlanAnualController@horasCreate');
 
 //configuracion
+Route::get('/configuracion', 'Configuracion@index');
+Route::put('/configuracion', 'Configuracion@modify');
 
 //lineas_de_investigacion
+Route::get('/lineas', 'lineas_de_investigacion@index');
+Route::post('/lineas', 'lineas_de_investigacion@index');
+Route::put('/lineas', 'lineas_de_investigacion@index');
+Route::delete('/lineas', 'lineas_de_investigacion@index');
 
 //Carrera
+Route::get('/lineas', 'lineas_de_investigacion@index');
+Route::post('/lineas', 'lineas_de_investigacion@index');
+Route::put('/lineas', 'lineas_de_investigacion@index');
+Route::delete('/lineas', 'lineas_de_investigacion@index');
 
 //Division
+Route::get('/lineas', 'lineas_de_investigacion@index');
+Route::post('/lineas', 'lineas_de_investigacion@index');
+Route::put('/lineas', 'lineas_de_investigacion@index');
+Route::delete('/lineas', 'lineas_de_investigacion@index');
 
 //Materia
-
+Route::get('/lineas', 'lineas_de_investigacion@index');
+Route::post('/lineas', 'lineas_de_investigacion@index');
+Route::put('/lineas', 'lineas_de_investigacion@index');
+Route::delete('/lineas', 'lineas_de_investigacion@index');
 
 // Route::resource('division','DivisionsController');
 
