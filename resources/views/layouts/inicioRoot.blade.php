@@ -15,36 +15,28 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 
-	<title>Administrar cuentas</title>
+	<title>Inicio</title>
 </head>
 <body>
-     @include('inc.messages')
     <header>
     	<table>
     		<tr>
     		<td><img src="https://st2.depositphotos.com/3643473/6063/i/450/depositphotos_60637477-stock-photo-friends-holding-hands.jpg" height="100" width="100"></td>
     		<td>Nombre usuario</td>
-    		<td><h2 class="blue-text">Administrar cuentas</h2> </td>
+    		<td><h2 class="blue-text">Inicio</h2> </td>
     		</tr>
     	</table>
     </header>
-    <aside style="float: left; margin: 10px;">
+    <aside style="float: left;">
 	<ul>
 
-	 	<li><button class="btn btn-lg btn-block" type="button">Administrar cuentas</button></li>
-		<li><button class="btn btn-lg btn-block" type="button">Planes de trabajo</button></li>
-  		<li><button class="btn btn-lg btn-block" type="button">Informes anuales</button></li>
-		<li><button class="btn btn-lg btn-block" type="button">Estadisticas</button></li>
-	</ul>
-
-	<ul>
-		<li><a href="/neo_fenix/public/user/create" class="black-text">Crear</a></li>
-		<li><a href="/neo_fenix/public/user/delete" class="black-text">Eliminar</a></li>
-		<li><a href="/neo_fenix/public/user/edit" class="black-text">Modificar</a></li>
-		<li><a href="/neo_fenix/public/user/upload" class="black-text">Cargar</a></li>
+	 	 <li><button class="btn btn-lg btn-block" type="button">Administrar cuentas</button></li>
+        <li><button class="btn btn-lg btn-block" type="button">Planes de trabajo</button></li>
+        <li><button class="btn btn-lg btn-block" type="button">Informes anuales</button></li>
+        <li><button class="btn btn-lg btn-block" type="button">Estadisticas</button></li>
 	</ul>
 	</aside>
-	<section style=" align-self: center; margin: 20px;">
+	<section style="float: left;">
 		@yield('content')
 	</section>
 	 <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
