@@ -2,21 +2,12 @@
 
 @section('content')
 
-<h5 align="center">Investigación</h5>
+<h5 align="center">Formación</h5>
  <div class="row">
-    <form class="col s12">
-      <p>Asignatura para el periodo Enero - Julio</p>
-      <div class="row">
-      <div class="select">
-      <option></option>
-      <label>Linea de investigación</label>   
-      </div>
-
-      <div class="input-field col s8">
-        <textarea id="descripcion" class="materialize-textarea" class="validate"></textarea> 
-        <label for="descripcion">Descripción</label>
-      </div>
-
+  <form class="col s12">
+     <div class="input-field col s12">
+         <textarea id="programa" class="materialize-textarea" class="validate"></textarea> 
+        <label for="programa">Progreso o formación propia en programas de posgrado</label>S
       </div>
       <div class="row">
       <div class="input-field col s2">

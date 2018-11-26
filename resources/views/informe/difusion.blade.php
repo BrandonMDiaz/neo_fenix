@@ -2,19 +2,16 @@
 
 @section('content')
 
-<h5 align="center">Investigación</h5>
+<h5 align="center">Difusión</h5>
  <div class="row">
-    <form class="col s12">
-      <p>Asignatura para el periodo Enero - Julio</p>
-      <div class="row">
-      <div class="select">
-      <option></option>
-      <label>Linea de investigación</label>   
+     <div class="input-field col s5">
+      <textarea id="actividad" class="materialize-textarea" class="validate"></textarea> 
+        <label for="actividad">Actividad</label>
       </div>
 
-      <div class="input-field col s8">
-        <textarea id="descripcion" class="materialize-textarea" class="validate"></textarea> 
-        <label for="descripcion">Descripción</label>
+      <div class="input-field col s9">
+         <textarea id="detalles" class="materialize-textarea" class="validate"></textarea> 
+        <label for="detalles">Detalles</label>
       </div>
 
       </div>

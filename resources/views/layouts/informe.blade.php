@@ -27,7 +27,7 @@
     		</tr>
     	</table>
     </header>
-    <aside style="float: left; margin: 10px;">
+    <aside style="float: left;">
 	<ul>
 
 	 	<li><button class="btn btn-lg btn-block" type="button">Plan anual</button></li>
@@ -45,7 +45,7 @@
         <li><a href="/neo_fenix/public/informe/historial" class="black-text">Comentarios</a></li>
 	</ul>
 	</aside>
-	<section style="align-self: center; margin: 20px;">
+	<section style="float: left;">
 		@yield('content')
 	</section>
 	 <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>

@@ -56,7 +56,7 @@
             {{ Form::text('email', '', ['id' => 'email',
             'class' => 'form-control validate', "required" => '',
             "aria-required"=> "true"]) }}
-            <span class="helper-text" data-error="wrong" data-success="right">Ejemplo: fenix@fenix.com</span>
+            <span class="helper-text">Ejemplo: fenix@fenix.com</span>
         </div>
     </div>
     <div class="row">

@@ -6,10 +6,12 @@
  <div class="row">
      <div class="input-field col s12">
 
-      <div class="checkbox">
-         <input id="yes">
-        <label for="porDefinir">Por definir</label>
-      </div>
+    <p>
+      <label>
+        <input type="checkbox" id="porDefinir" />
+        <span>por Definir</span>
+      </label>
+    </p>
 
       <div class="input-field col s5">
          <input id="programa" type="text" class="validate">

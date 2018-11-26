@@ -7,19 +7,19 @@
     <form class="col s12">
       <div class="row">
       <p>Actividades para su tarea de retención de alumnos</p>
-      <p>categoría</p>
       <div class="select">
-        
+      <option></option>
+      <label>categoría</label>   
       </div>
       <div class="input-field col s8">
-         <input id="actividadRet" type="text" class="validate">
+        <textarea id="actividadRet" class="materialize-textarea" class="validate"></textarea> 
         <label for="actividadRet">Actividad de retención de alumnos</label>
       </div>
       </div>
       
       <div class="row">
       <div class="input-field col s8">
-         <input id="actividadRep" type="text" class="validate">
+        <textarea id="actividadRep" class="materialize-textarea" class="validate"></textarea> 
         <label for="actividadRep">Actividad para disminuir la reprobación</label>
       </div>
       </div>

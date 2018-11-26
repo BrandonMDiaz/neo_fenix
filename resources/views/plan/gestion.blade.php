@@ -7,7 +7,7 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-         <input id="gestion" type="text" class="validate">
+         <textarea id="gestion" class="materialize-textarea" class="validate"></textarea> 
         <label for="gestion">Descripción de su planeación relacionada con la gestión</label>
       </div>
       </div>
