@@ -27,7 +27,7 @@
     		</tr>
     	</table>
     </header>
-    <aside style="float: left;">
+    <aside style="float: left; margin: 10px;">
 	<ul>
 
 	 	<li><button class="btn btn-lg btn-block" type="button">Planes de trabajo</button></li>
@@ -39,7 +39,7 @@
         <li><a href="/neo_fenix/public/plan/docencia" class="black-text">Generales</a></li>
         <li><a href="/neo_fenix/public/plan/investigacion" class="black-text">Individuales</a></li>
 	</aside>
-	<section style="float: left;">
+	<section style="align-self: center; margin: 20px;">
 		@yield('content')
 	</section>
 	 <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
