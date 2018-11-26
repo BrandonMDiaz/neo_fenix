@@ -20,7 +20,42 @@
 <body>
   <h1 style="text-align: center;">Plan anual</h1>
   <h3>Docencia</h3>
-    
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Carrera</th>
+        <th scope="col">Materia</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if(count($Materias > 1))
+        @foreach ($Materia as $Materias)
+          <th scope="row">{{}}</th>
+          <td>{{$materia}}</td>
+          <td>{{$}}</td>
+          <td>{{$}}</td>
+        @endforeach
+
+      <tr>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
   <h3>Investigacion</h3>
   <h3>Tutoria</h3>
   <h3>Gestión</h3>
