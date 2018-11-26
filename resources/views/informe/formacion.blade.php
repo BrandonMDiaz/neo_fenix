@@ -1,4 +1,4 @@
-@extends ('layouts.plan')
+@extends ('layouts.informe')
 
 @section('content')
 
@@ -6,7 +6,7 @@
  <div class="row">
   <form class="col s12">
      <div class="input-field col s12">
-         <textarea id="programa" class="materialize-textarea" class="validate"></textarea> 
+         <textarea id="programa" class="materialize-textarea" class="validate"></textarea>
         <label for="programa">Progreso o formación propia en programas de posgrado</label>S
       </div>
       <div class="row">

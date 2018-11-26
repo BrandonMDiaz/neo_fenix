@@ -1,4 +1,4 @@
-@extends ('layouts.plan')
+@extends ('layouts.informe')
 
 @section('content')
 
@@ -46,7 +46,7 @@
       <input id="horasTotal" type="text" class="validate" disabled="">
       <label for="horasTotal">Total de horas</label>
       </div>
-      </div>      
+      </div>
       <button class="btn btn-lg btn-primary" type="button">Anterior</button>
       <button class="btn btn-lg btn-primary" type="button">Guardar</button>
       <button class="btn btn-lg btn-primary" type="button">Imprimir</button>

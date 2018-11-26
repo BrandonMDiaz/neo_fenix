@@ -1,4 +1,4 @@
-@extends ('layouts.plan')
+@extends ('layouts.informe')
 
 @section('content')
 
@@ -13,12 +13,12 @@
       </div>
 
         <div class="input-field col s12">
-         <textarea id="otras" class="materialize-textarea" class="validate"></textarea> 
+         <textarea id="otras" class="materialize-textarea" class="validate"></textarea>
         <label for="otras">Otras actividades</label>
       </div>
 
         <div class="input-field col s12">
-        <textarea id="proyectos" class="materialize-textarea" class="validate"></textarea> 
+        <textarea id="proyectos" class="materialize-textarea" class="validate"></textarea>
         <label for="proyectos">Proyectos</label>
       </div>
 

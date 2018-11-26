@@ -1,16 +1,16 @@
-@extends ('layouts.plan')
+@extends ('layouts.informe')
 
 @section('content')
 
 <h5 align="center">Difusión</h5>
  <div class="row">
      <div class="input-field col s5">
-      <textarea id="actividad" class="materialize-textarea" class="validate"></textarea> 
+      <textarea id="actividad" class="materialize-textarea" class="validate"></textarea>
         <label for="actividad">Actividad</label>
       </div>
 
       <div class="input-field col s9">
-         <textarea id="detalles" class="materialize-textarea" class="validate"></textarea> 
+         <textarea id="detalles" class="materialize-textarea" class="validate"></textarea>
         <label for="detalles">Detalles</label>
       </div>
 

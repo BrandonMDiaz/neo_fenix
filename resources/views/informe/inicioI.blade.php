@@ -1,4 +1,4 @@
-@extends ('layouts.plan')
+@extends ('layouts.informe')
 
 @section('content')
 
@@ -15,5 +15,5 @@
       <button class="btn btn-lg btn-primary btn-block" type="button">Siguiente</button>
     </form>
  </div>
-	
+
 @stop
